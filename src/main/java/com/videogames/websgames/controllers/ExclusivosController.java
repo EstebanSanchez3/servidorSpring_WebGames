@@ -11,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.videogames.websgames.entities.ExclusivosEntities;
 import com.videogames.websgames.services.IExclusivosService;
 
+
+
 @Controller
 public class ExclusivosController {
 	
@@ -21,7 +23,7 @@ public class ExclusivosController {
 	
 	public ModelAndView crearNuevoExclusivo (
 			
-			@RequestParam(required = false) Integer id,
+			//@RequestParam(required = true) Integer id,
 			@RequestParam(required = false) String nombre,
 			@RequestParam(required = false) Integer puntuacion,
 			@RequestParam(required = false) Integer anio_estreno,
