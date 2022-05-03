@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilo_crearExclusivo.css">
 </head>
 <body>
-    <h1>EXCLUSIVOS </h1>
+    <h1>LISTA DE EXCLUSIVOS</h1>
 
 <!--ENUNCIADO!-->
     <div>
@@ -30,16 +30,16 @@
 <!--CONEXION CON JSON!-->
 <!--TH:EACH RECUPERA LOS DATOS DESDE EL CONTROLLER AL HTML!-->
             <tr th:each="exclusivo:${exclusivos}">
-                <td th:text="${exclusivos.id}" />
-                <td th:text="${exclusivos.nombre}" />
-                <td th:text="${exclusivos.puntuacion}" />
-                <td th:text="${exclusivos.anio_estreno}" />
-                <td th:text="${exclusivos.estilo_juego}" />
-                <td th:text="${exclusivos.sinopsis}" />
-                <td th:text="${exclusivos.duracion}" />
-                <td> <img th:src="${exclusivos.imagen}" /></td>
-                <td> <video controls th:src="${exclusivos.trailer}" /></td>
-                <td th:text="${exclusivos.precio}" />
+                <td th:text="${exclusivo.id}" />
+                <td th:text="${exclusivo.nombre}" />
+                <td th:text="${exclusivo.puntuacion}" />
+                <td th:text="${exclusivo.anio_estreno}" />
+                <td th:text="${exclusivo.estilo_juego}" />
+                <td th:text="${exclusivo.sinopsis}" />
+                <td th:text="${exclusivo.duracion}" />
+                <td> <img th:src="${exclusivo.imagen}" /></td>
+                <td> <video controls th:src="${exclusivo.trailer}" /></td>
+                <td th:text="${exclusivo.precio}" />
         </table>
     </div>
 
@@ -57,8 +57,7 @@
             <input type="text" name="imagen" placeholder="Caratula">
             <input type="text" name="trailer" placeholder="Trailer oficial">
             <input type="text" name="precio" placeholder="Precio">
-            
-            <input type="submit" value="enviar">
+            <input type="submit" value="ENVIAR">
         </form>
     </div>
 
