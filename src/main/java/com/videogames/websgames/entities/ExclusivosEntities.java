@@ -5,26 +5,35 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name="excluivos")
-public class ExclusivosEntities {
+//GENERAR ENTITY
+//NAME DE TABLA EN BBDD
+  @Entity(name="exclusivos_ps4")
+  public class ExclusivosEntities {
 
+//GENERAR ID+GENERATEDVALUE PARA PK Y AUTOINCREMENTAL
+//LO MISMO DICE EL PARENTESIS 
+//CREAR VALORES
+//MISMO NOMBRE QUE EN BBDD
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id ;
 	private String nombre ;
-	private int puntuacion ;
+	private String puntuacion ;
 	private int anio_estreno ;
 	private String estilo_juego ;
 	private String sinopsis ;
-	private int duracion ;
+	private String duracion ;
 	private String imagen ;
 	private String trailer ;
-	private int precio ;
-	
+	private String precio ;
+
+//CONSTRUCTOR VACÍO
 	public ExclusivosEntities() {
 	}
-	public ExclusivosEntities(int id, String nombre, int puntuacion, int anio_estreno, String estilo_juego,
-			String sinopsis, int duracion, String imagen, String trailer, int precio) {
+	
+//CONSTRUCTOR CON TODOS
+	public ExclusivosEntities(int id, String nombre, String puntuacion, int anio_estreno, String estilo_juego,
+			String sinopsis, String duracion, String imagen, String trailer, String precio) {
 		this.id = id;
 		this.nombre = nombre;
 		this.puntuacion = puntuacion;
@@ -37,6 +46,8 @@ public class ExclusivosEntities {
 		this.precio = precio;
 	}
 	
+	
+//GETTERS AND SETTERS
 	public int getId() {
 		return id;
 	}
@@ -49,10 +60,10 @@ public class ExclusivosEntities {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getPuntuacion() {
+	public String getPuntuacion() {
 		return puntuacion;
 	}
-	public void setPuntuacion(int puntuacion) {
+	public void setPuntuacion(String puntuacion) {
 		this.puntuacion = puntuacion;
 	}
 	public int getAnio_estreno() {
@@ -73,10 +84,10 @@ public class ExclusivosEntities {
 	public void setSinopsis(String sinopsis) {
 		this.sinopsis = sinopsis;
 	}
-	public int getDuracion() {
+	public String getDuracion() {
 		return duracion;
 	}
-	public void setDuracion(int duracion) {
+	public void setDuracion(String duracion) {
 		this.duracion = duracion;
 	}
 	public String getImagen() {
@@ -91,10 +102,10 @@ public class ExclusivosEntities {
 	public void setTrailer(String trailer) {
 		this.trailer = trailer;
 	}
-	public int getPrecio() {
+	public String getPrecio() {
 		return precio;
 	}
-	public void setPrecio(int precio) {
+	public void setPrecio(String precio) {
 		this.precio = precio;
 	}
 }

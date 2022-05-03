@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear_exclusivo</title>
+    <link rel="stylesheet" href="estilo_crearExclusivo.css">
 </head>
 <body>
+    <h1>EXCLUSIVOS </h1>
+
+<!--ENUNCIADO!-->
+    <div>
+        <table>
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Puntuación</th>
+                <th>Año de estreno</th>
+                <th>Estilo de juego</th>
+                <th>Sinopsis</th>
+                <th>Duración</th>
+                <th>Imagen</th>
+                <th>Trailer</th>
+                <th>Precio</th>
+            </tr>
+
+<!--LO QUE APARECE EN TABLA Y PÁGINA!-->
+<!--CONEXION CON JSON!-->
+<!--TH:EACH RECUPERA LOS DATOS DESDE EL CONTROLLER AL HTML!-->
+            <tr th:each="exclusivo:${exclusivos}">
+                <td th:text="${exclusivos.id}" />
+                <td th:text="${exclusivos.nombre}" />
+                <td th:text="${exclusivos.puntuacion}" />
+                <td th:text="${exclusivos.anio_estreno}" />
+                <td th:text="${exclusivos.estilo_juego}" />
+                <td th:text="${exclusivos.sinopsis}" />
+                <td th:text="${exclusivos.duracion}" />
+                <td> <img th:src="${exclusivos.imagen}" /></td>
+                <td> <video controls th:src="${exclusivos.trailer}" /></td>
+                <td th:text="${exclusivos.precio}" />
+        </table>
+    </div>
+
+<!--DONDE PONER DATOS, LOS QUE APARECEN EN LA TABLA Y PAGINA!-->
+    <div >
+        <form method="get" action="/crearExclusivos">
+
+            <input type="number" name="id" placeholder="Identificador">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="puntuacion" placeholder="Puntuación">
+            <input type="number" name="anio_estreno" placeholder="Año de estreno">
+            <input type="text" name="estilo_juego" placeholder="Tipo de juego">
+            <input type="text" name="sinopsis" placeholder="Sinopsis">
+            <input type="text" name="duracion" placeholder="duración">
+            <input type="text" name="imagen" placeholder="Caratula">
+            <input type="text" name="trailer" placeholder="Trailer oficial">
+            <input type="text" name="precio" placeholder="Precio">
+            
+            <input type="submit" value="enviar">
+        </form>
+    </div>
 
 </body>
 </html>

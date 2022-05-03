@@ -1,1 +1,43 @@
-@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+	font-weight: bold;
+    background-color: #d7cbcb;
+    
+}
+
+table {
+	display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+td {
+	background-color:gray;
+	color:white;
+	height: 10px;
+}
+
+th {
+	border-style: solid;
+}
+
+img {
+	height: 300px;
+}
+
+input {
+    border-color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ddc850;
+    border-radius: 7px;
+    color: #8e402a;
+    border-width: 2px;
+    border-bottom-width: 3px;
+}
+
+::placeholder { color: #8e402a; }
