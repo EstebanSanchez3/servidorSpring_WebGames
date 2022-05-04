@@ -23,7 +23,7 @@ import com.videogames.websgames.services.IExclusivosService;
   @RequestMapping (value = "/crearExclusivos")
 	
 //MODELANDVIEW LOS DATOS INTRODUCIDOS SE MUESTRAN EN PANTALLA
-  public ModelAndView crearNuevoExclusivos (
+  public ModelAndView crearNuevoExclusivo (
 			
 //REQUESTPARAM DATOS QUE SE VERÁN EN PANTALLA E INTERACTUARÁN↓↓ 
 //↑↑CON MODELANDVIEW (/CREAREXCLUSIVOS)

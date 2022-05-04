@@ -38,13 +38,13 @@
                 <td th:text="${exclusivo.sinopsis}" />
                 <td th:text="${exclusivo.duracion}" />
                 <td> <img th:src="${exclusivo.imagen}" /></td>
-                <td> <video controls th:src="${exclusivo.trailer}" /></td>
+                <td> <video controls th:src="${exclusivo.trailer}" /></td> 
                 <td th:text="${exclusivo.precio}" />
         </table>
     </div>
 
 <!--DONDE PONER DATOS, LOS QUE APARECEN EN LA TABLA Y PAGINA!-->
-    <div >
+    <div>
         <form method="get" action="/crearExclusivos">
 
             <input type="number" name="id" placeholder="Identificador">
